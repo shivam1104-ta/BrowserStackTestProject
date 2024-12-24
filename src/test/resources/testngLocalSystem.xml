@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="ElPaisTestSuite" parallel="tests" thread-count="2">
+  
+  <test name="LocalChromeTest">
+    <classes>
+      
+       <class name="BrowserStack.ElPaisTest.ElPaisScraperTest"/>
+        <class name="BrowserStack.ElPaisTest.TranslationService"/>
+    </classes>
+  </test>
+</suite>
