@@ -14,7 +14,7 @@ import org.json.JSONObject;
 import org.json.JSONException;
 
 public class TranslationService {
-    private static final String RAPID_API_KEY = "4fddf290f2msh5eba62743cc4576p1d3c6fjsn86420677ecc7";
+    private static final String RAPID_API_KEY = "95b0846351mshed38779a23f0b4dp1e6a11jsnbef326f4441d";
     private static final String RAPID_API_HOST = "rapid-translate-multi-traduction.p.rapidapi.com";
     private static final String ENDPOINT_URL = "https://rapid-translate-multi-traduction.p.rapidapi.com/t";
     public static String translateEStoEN(String textInSpanish) {

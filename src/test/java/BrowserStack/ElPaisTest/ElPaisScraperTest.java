@@ -10,17 +10,11 @@ import java.util.NoSuchElementException;
 import java.io.*;
 import java.net.URL;
 
-/**
- * Test class to scrape El Pais Opinion section, download images,
- * and translate article titles from Spanish to English using
- * the Rapid Translate Multi Traduction API (via TranslationService).
- */
+
 public class ElPaisScraperTest {
 
     private WebDriver driver;
 
-    // We no longer need the Google Translate key, since we're using RapidAPI now.
-    // private static final String GOOGLE_TRANSLATE_KEY = "YOUR_GOOGLE_API_KEY";
 
     static class Article {
         String titleEs;
@@ -31,7 +25,6 @@ public class ElPaisScraperTest {
 
     @BeforeMethod
     public void setUp() {
-        // Use WebDriverManager to auto-manage ChromeDriver
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
@@ -59,14 +52,18 @@ public class ElPaisScraperTest {
                 WebElement contentElem = artElem.findElement(By.tagName("p"));
                 article.contentEs = contentElem.getText().trim();
 
-                // Try to find an image
-                try {
-                    WebElement imgElem = artElem.findElement(By.tagName("img"));
-                    article.imageUrl = imgElem.getAttribute("src");
-                } catch (NoSuchElementException e) {
+                // Safely retrieve image without throwing an exception
+                List<WebElement> imgElements = artElem.findElements(By.tagName("img"));
+                if (!imgElements.isEmpty()) {
+                    // Optionally, use a more specific selector if available
+                    article.imageUrl = imgElements.get(0).getAttribute("src");
+                } else {
                     System.out.println("No image for article #" + (i + 1));
+                    article.imageUrl = null; // Explicitly set to null for clarity
                 }
 
+            } catch (NoSuchElementException e) {
+                System.out.println("Required element not found in article #" + (i + 1) + ": " + e.getMessage());
             } catch (Exception e) {
                 System.out.println("Could not parse article #" + (i + 1) + ": " + e.getMessage());
             }
@@ -88,12 +85,9 @@ public class ElPaisScraperTest {
         for (int i = 0; i < articles.size(); i++) {
             String imageUrl = articles.get(i).imageUrl;
             if (imageUrl != null && !imageUrl.isEmpty()) {
-                downloadImage(imageUrl, "article_" + i + ".jpg");
+                downloadImage(imageUrl, "article_" + (i + 1) + ".jpg"); 
             }
         }
-
-        // 4. Translate Titles using our RapidAPI-based TranslationService
-        //    Make sure you've configured your 'TranslationService' class to use RapidAPI
         for (Article art : articles) {
             if (art.titleEs != null && !art.titleEs.isEmpty()) {
                 // Spanish -> English
@@ -109,12 +103,10 @@ public class ElPaisScraperTest {
             System.out.println("Article #" + (i + 1) + " Title (EN): " + articles.get(i).titleEn);
         }
 
-        // 6. Identify repeated words in the translated titles
         Map<String, Integer> wordCount = new HashMap<>();
         for (Article art : articles) {
             String[] tokens = art.titleEn.split("\\s+");
             for (String token : tokens) {
-                // Lowercase + remove non-alphanumeric
                 String clean = token.toLowerCase().replaceAll("[^a-z0-9]", "");
                 if (!clean.isEmpty()) {
                     wordCount.put(clean, wordCount.getOrDefault(clean, 0) + 1);
@@ -129,7 +121,6 @@ public class ElPaisScraperTest {
             }
         }
 
-        // Basic assertion to ensure we scraped something
         Assert.assertFalse(articles.isEmpty(), "No articles found!");
     }
 
