@@ -37,7 +37,8 @@ Copy code
 - **`ElPaisScraperTest.java`** – A basic TestNG class for local testing.  
 - **`BrowserStackExampleTest.java`** – Demonstrates parallel cross‐browser testing on BrowserStack.  
 - **`TranslationService.java`** – Calls the Rapid Translate API.  
-- **`testng.xml`** – Manages parallel TestNG runs (desktop + mobile browsers).
+- **`testngBrowserStack.xml`** – Manages parallel TestNG runs (desktop + mobile browsers).
+- **`testngLocalSystem.xml`** – Manages local System TestNg runs.
 
 ---
 
