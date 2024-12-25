@@ -51,66 +51,6 @@ Copy code
    mvn clean install
 This downloads the required dependencies (Selenium, TestNG, HttpClient, etc.) and compiles the project.
 
-Configuration
-Rapid Translate API Key
-In TranslationService.java, find:
-java
-Copy code
-private static final String RAPID_API_KEY = "YOUR_RAPIDAPI_KEY";
-Replace "YOUR_RAPIDAPI_KEY" with your actual key from RapidAPI.
-BrowserStack Credentials
-In BrowserStackExampleTest.java, look for:
-java
-Copy code
-private static final String USERNAME = "YOUR_BROWSERSTACK_USERNAME";
-private static final String ACCESS_KEY = "YOUR_BROWSERSTACK_ACCESS_KEY";
-Replace these with your real BrowserStack username & access key.
-Running Locally
-If you only want a local run (e.g., using ChromeDriver):
-
-bash
-Copy code
-mvn clean test
-This typically executes tests in ElPaisScraperTest.java.
-Scrapes up to 5 articles, prints their Spanish titles/content, downloads images, calls TranslationService for each Spanish title, and prints repeated words in English.
-Running in Parallel on BrowserStack
-Edit testng.xml to specify multiple <test> blocks (Windows, macOS, iPhone, Android, etc.). An example is already included:
-xml
-Copy code
-<suite name="ElPaisBrowserStackSuite" parallel="tests" thread-count="5">
-    <test name="Chrome_Win10">
-      <parameter name="os" value="Windows"/>
-      <parameter name="osVersion" value="10"/>
-      <parameter name="browserName" value="Chrome"/>
-      <parameter name="browserVersion" value="latest"/>
-      <classes>
-        <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
-      </classes>
-    </test>
-    <!-- More <test> blocks for Firefox, Safari, iPhone, iQOO Neo 7, etc. -->
-</suite>
-Ensure you have configured your BrowserStackExampleTest with the correct credentials and device/OS parameters.
-Run:
-bash
-Copy code
-mvn clean test -DsuiteXmlFile=testng.xml
-Check the BrowserStack Automate Dashboard for your sessions. You should see 5 concurrent tests (or however many you defined) scraping El País in real time.
-Common Issues
-RapidAPI 403 / 429 – “Not subscribed” or “Too many requests.”
-
-Verify your subscription plan.
-Ensure you’re not exceeding free tier limits.
-Invalid BrowserStack Device – If “iQOO Neo 7” is not in BrowserStack’s official list, you’ll get an error.
-
-Use a device from the BrowserStack device list.
-Legacy Capabilities Warning – If Selenium complains about “Sending the following invalid capabilities: [build, name, os],” you must place them inside bstack:options rather than top-level. (Our code already follows this pattern.)
-
-License
-(Optional: Add your license details here, e.g., MIT, Apache-2.0, or remove this section if not applicable.)
-
-Enjoy Cross-Browser Testing!
-You now have a complete setup for scraping El País articles, translating them via a public API, and verifying them in parallel on BrowserStack across various devices and browsers. Feel free to modify or extend the tests as needed!
-
 
 
 
