@@ -23,9 +23,9 @@ import org.testng.annotations.Test;
 
 public class BrowserStackExampleTest {
 	
-	// Credentials
-    private static final String USERNAME = "shivamtayal_W4Gwj7";
-    private static final String ACCESS_KEY = "8vjpq3VXWJV6m4yVCsZ3";
+	// kindly provide your Credentials
+    private static final String USERNAME = "YOUR_BROWSERSTACK_USERNAME";
+    private static final String ACCESS_KEY = "YOUR_BROWSERSTACK_ACCESS_KEY";
     private static final String BROWSERSTACK_HUB_URL =
         "https://" + USERNAME + ":" + ACCESS_KEY + "@hub.browserstack.com/wd/hub";
 

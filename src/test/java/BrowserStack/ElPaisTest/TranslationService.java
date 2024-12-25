@@ -17,7 +17,7 @@ public class TranslationService {
 	
 	//RAPID_API  for translation
 	
-    private static final String RAPID_API_KEY = "95b0846351mshed38779a23f0b4dp1e6a11jsnbef326f4441d";
+    private static final String RAPID_API_KEY = "YOUR_RAPID_API_KEY";
     private static final String RAPID_API_HOST = "rapid-translate-multi-traduction.p.rapidapi.com";
     private static final String ENDPOINT_URL = "https://rapid-translate-multi-traduction.p.rapidapi.com/t";
     public static String translateEStoEN(String textInSpanish) {
