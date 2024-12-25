@@ -94,22 +94,18 @@ public class BrowserStackExampleTest {
             Article article = new Article();
 
             try {
-                // Scrape Spanish Title
                 WebElement titleElem = artElem.findElement(By.cssSelector("h2, h3"));
                 article.titleEs = titleElem.getText().trim();
 
-                // Scrape Spanish Content Snippet
                 WebElement contentElem = artElem.findElement(By.tagName("p"));
                 article.contentEs = contentElem.getText().trim();
 
-                // **Safely retrieve image without throwing an exception**
                 List<WebElement> imgElements = artElem.findElements(By.tagName("img"));
                 if (!imgElements.isEmpty()) {
-                    // Optionally, use a more specific selector if available
                     article.imageUrl = imgElements.get(0).getAttribute("src");
                 } else {
                     System.out.println("No image for article #" + (i + 1));
-                    article.imageUrl = null; // Explicitly set to null for clarity
+                    article.imageUrl = null; 
                 }
 
             } catch (NoSuchElementException e) {
@@ -119,8 +115,6 @@ public class BrowserStackExampleTest {
             }
             articles.add(article);
         }
-
-        // 3. Print the scraped Spanish data
         System.out.println("=== SPANISH ARTICLES (BrowserStack) ===");
         for (int i = 0; i < articles.size(); i++) {
             Article art = articles.get(i);
@@ -131,32 +125,26 @@ public class BrowserStackExampleTest {
             System.out.println("------------------------");
         }
 
-        // (Optional) Download images locally
         for (int i = 0; i < articles.size(); i++) {
             String imageUrl = articles.get(i).imageUrl;
             if (imageUrl != null && !imageUrl.isEmpty()) {
-                downloadImage(imageUrl, "article_" + (i + 1) + ".jpg"); // Changed to (i + 1) for consistency
+                downloadImage(imageUrl, "article_" + (i + 1) + ".jpg"); 
             }
         }
 
-        // 4. Translate Titles using our RapidAPI-based TranslationService
-        //    Make sure you've configured your 'TranslationService' class to use RapidAPI
         for (Article art : articles) {
             if (art.titleEs != null && !art.titleEs.isEmpty()) {
-                // Spanish -> English
                 art.titleEn = TranslationService.translateEStoEN(art.titleEs);
             } else {
                 art.titleEn = "";
             }
         }
 
-        // 5. Print translated titles
         System.out.println("=== TRANSLATED TITLES (EN) ===");
         for (int i = 0; i < articles.size(); i++) {
             System.out.println("Article #" + (i + 1) + " Title (EN): " + articles.get(i).titleEn);
         }
 
-        // 6. Identify repeated words
         Map<String, Integer> wordCount = new HashMap<>();
         for (Article art : articles) {
             if (art.titleEn != null && !art.titleEn.isEmpty()) {
@@ -185,9 +173,6 @@ public class BrowserStackExampleTest {
         }
     }
 
-    /**
-     * Download an image from a given URL and save it locally.
-     */
     private void downloadImage(String urlStr, String fileName) {
         try (InputStream in = new URL(urlStr).openStream();
              FileOutputStream fos = new FileOutputStream(fileName)) {

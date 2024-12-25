@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-25T14:35:15 IST" name="ElPaisTestSuite" finished-at="2024-12-25T14:36:33 IST" duration-ms="77401">
+  <suite started-at="2024-12-25T19:16:12 IST" name="ElPaisTestSuite" finished-at="2024-12-25T19:17:06 IST" duration-ms="53688">
     <groups>
     </groups>
-    <test started-at="2024-12-25T14:35:15 IST" name="Firefox_Win10" finished-at="2024-12-25T14:35:50 IST" duration-ms="34590">
+    <test started-at="2024-12-25T19:16:12 IST" name="Firefox_Win10" finished-at="2024-12-25T19:16:33 IST" duration-ms="20789">
       <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T14:35:15 IST" name="setUp" finished-at="2024-12-25T14:35:36 IST" duration-ms="20310" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T19:16:12 IST" name="setUp" finished-at="2024-12-25T19:16:24 IST" duration-ms="12073" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,19 +43,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T14:35:36 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T14:35:49 IST" duration-ms="12843" status="PASS">
+        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T19:16:24 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T19:16:31 IST" duration-ms="7399" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScrapeElPaisOpinionOnBrowserStack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T14:35:49 IST" name="tearDown" finished-at="2024-12-25T14:35:50 IST" duration-ms="1337" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@1cf6d1be]" started-at="2024-12-25T19:16:31 IST" name="tearDown" finished-at="2024-12-25T19:16:33 IST" duration-ms="1262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- BrowserStack.ElPaisTest.BrowserStackExampleTest -->
     </test> <!-- Firefox_Win10 -->
-    <test started-at="2024-12-25T14:35:15 IST" name="Chrome_Win10" finished-at="2024-12-25T14:35:54 IST" duration-ms="38731">
+    <test started-at="2024-12-25T19:16:12 IST" name="Chrome_Win10" finished-at="2024-12-25T19:16:33 IST" duration-ms="20974">
       <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T14:35:15 IST" name="setUp" finished-at="2024-12-25T14:35:38 IST" duration-ms="22941" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T19:16:12 IST" name="setUp" finished-at="2024-12-25T19:16:18 IST" duration-ms="6486" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,19 +91,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T14:35:38 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T14:35:53 IST" duration-ms="14326" status="PASS">
+        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T19:16:18 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T19:16:31 IST" duration-ms="12942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScrapeElPaisOpinionOnBrowserStack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T14:35:53 IST" name="tearDown" finished-at="2024-12-25T14:35:54 IST" duration-ms="1375" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@771a660]" started-at="2024-12-25T19:16:31 IST" name="tearDown" finished-at="2024-12-25T19:16:33 IST" duration-ms="1491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- BrowserStack.ElPaisTest.BrowserStackExampleTest -->
     </test> <!-- Chrome_Win10 -->
-    <test started-at="2024-12-25T14:35:50 IST" name="Safari_macOS" finished-at="2024-12-25T14:36:09 IST" duration-ms="18627">
+    <test started-at="2024-12-25T19:16:33 IST" name="Safari_macOS" finished-at="2024-12-25T19:16:45 IST" duration-ms="12773">
       <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T14:35:50 IST" name="setUp" finished-at="2024-12-25T14:35:54 IST" duration-ms="4102" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T19:16:33 IST" name="setUp" finished-at="2024-12-25T19:16:37 IST" duration-ms="4370" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -139,19 +139,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T14:35:54 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T14:36:07 IST" duration-ms="13030" status="PASS">
+        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T19:16:37 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T19:16:44 IST" duration-ms="6899" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScrapeElPaisOpinionOnBrowserStack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T14:36:07 IST" name="tearDown" finished-at="2024-12-25T14:36:09 IST" duration-ms="1492" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@5149d738]" started-at="2024-12-25T19:16:44 IST" name="tearDown" finished-at="2024-12-25T19:16:45 IST" duration-ms="1498" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- BrowserStack.ElPaisTest.BrowserStackExampleTest -->
     </test> <!-- Safari_macOS -->
-    <test started-at="2024-12-25T14:35:54 IST" name="iPhone_14" finished-at="2024-12-25T14:36:23 IST" duration-ms="29433">
+    <test started-at="2024-12-25T19:16:33 IST" name="iPhone_14" finished-at="2024-12-25T19:17:00 IST" duration-ms="27324">
       <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T14:35:54 IST" name="setUp" finished-at="2024-12-25T14:36:13 IST" duration-ms="18576" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T19:16:33 IST" name="setUp" finished-at="2024-12-25T19:16:52 IST" duration-ms="19123" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -187,19 +187,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T14:36:13 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T14:36:22 IST" duration-ms="9431" status="PASS">
+        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T19:16:52 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T19:16:59 IST" duration-ms="6919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScrapeElPaisOpinionOnBrowserStack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T14:36:22 IST" name="tearDown" finished-at="2024-12-25T14:36:23 IST" duration-ms="1420" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@4b013c76]" started-at="2024-12-25T19:16:59 IST" name="tearDown" finished-at="2024-12-25T19:17:00 IST" duration-ms="1278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- BrowserStack.ElPaisTest.BrowserStackExampleTest -->
     </test> <!-- iPhone_14 -->
-    <test started-at="2024-12-25T14:36:09 IST" name="Galaxy_S23" finished-at="2024-12-25T14:36:33 IST" duration-ms="24088">
+    <test started-at="2024-12-25T19:16:45 IST" name="Galaxy_S23" finished-at="2024-12-25T19:17:06 IST" duration-ms="20047">
       <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T14:36:09 IST" name="setUp" finished-at="2024-12-25T14:36:20 IST" duration-ms="11286" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T19:16:45 IST" name="setUp" finished-at="2024-12-25T19:16:56 IST" duration-ms="10673" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -235,11 +235,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T14:36:20 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T14:36:31 IST" duration-ms="11538" status="PASS">
+        <test-method signature="testScrapeElPaisOpinionOnBrowserStack()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T19:16:56 IST" name="testScrapeElPaisOpinionOnBrowserStack" finished-at="2024-12-25T19:17:04 IST" duration-ms="7965" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testScrapeElPaisOpinionOnBrowserStack -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T14:36:31 IST" name="tearDown" finished-at="2024-12-25T14:36:33 IST" duration-ms="1258" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:BrowserStack.ElPaisTest.BrowserStackExampleTest@7bba5817]" started-at="2024-12-25T19:17:04 IST" name="tearDown" finished-at="2024-12-25T19:17:06 IST" duration-ms="1405" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

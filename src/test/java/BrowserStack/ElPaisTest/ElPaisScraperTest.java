@@ -31,10 +31,8 @@ public class ElPaisScraperTest {
 
     @Test
     public void testScrapeElPaisOpinion() {
-        // 1. Navigate to El Pais Opinion section
         driver.get("https://elpais.com/opinion");
 
-        // 2. Locate the first 5 articles
         List<WebElement> articleElements = driver.findElements(By.cssSelector("article"));
         int max = Math.min(articleElements.size(), 5);
 
@@ -44,22 +42,16 @@ public class ElPaisScraperTest {
             Article article = new Article();
 
             try {
-                // Scrape Spanish Title
                 WebElement titleElem = artElem.findElement(By.cssSelector("h2, h3"));
                 article.titleEs = titleElem.getText().trim();
-
-                // Scrape Spanish Content Snippet
                 WebElement contentElem = artElem.findElement(By.tagName("p"));
                 article.contentEs = contentElem.getText().trim();
-
-                // Safely retrieve image without throwing an exception
                 List<WebElement> imgElements = artElem.findElements(By.tagName("img"));
                 if (!imgElements.isEmpty()) {
-                    // Optionally, use a more specific selector if available
                     article.imageUrl = imgElements.get(0).getAttribute("src");
                 } else {
                     System.out.println("No image for article #" + (i + 1));
-                    article.imageUrl = null; // Explicitly set to null for clarity
+                    article.imageUrl = null; 
                 }
 
             } catch (NoSuchElementException e) {
@@ -70,7 +62,6 @@ public class ElPaisScraperTest {
             articles.add(article);
         }
 
-        // 3. Print the scraped Spanish data
         System.out.println("=== SPANISH ARTICLES ===");
         for (int i = 0; i < articles.size(); i++) {
             Article art = articles.get(i);
@@ -81,7 +72,6 @@ public class ElPaisScraperTest {
             System.out.println("------------------------");
         }
 
-        // (Optional) Download images locally
         for (int i = 0; i < articles.size(); i++) {
             String imageUrl = articles.get(i).imageUrl;
             if (imageUrl != null && !imageUrl.isEmpty()) {
@@ -97,7 +87,6 @@ public class ElPaisScraperTest {
             }
         }
 
-        // 5. Print translated titles
         System.out.println("=== TRANSLATED TITLES (EN) ===");
         for (int i = 0; i < articles.size(); i++) {
             System.out.println("Article #" + (i + 1) + " Title (EN): " + articles.get(i).titleEn);
@@ -131,9 +120,6 @@ public class ElPaisScraperTest {
         }
     }
 
-    /**
-     * Download an image from a given URL and save it locally.
-     */
     private void downloadImage(String urlStr, String fileName) {
         try (InputStream in = new URL(urlStr).openStream();
              FileOutputStream fos = new FileOutputStream(fileName)) {
