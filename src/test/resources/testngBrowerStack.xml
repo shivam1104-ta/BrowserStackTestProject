@@ -7,7 +7,7 @@
     <parameter name="browserName" value="Chrome"/>
     <parameter name="browserVersion" value="latest"/>
     <classes>
-      <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
+      <class name="BrowserStack.ElPaisTest.BrowserStackTest"/>
     </classes>
   </test>
 
@@ -17,7 +17,7 @@
     <parameter name="browserName" value="Firefox"/>
     <parameter name="browserVersion" value="latest"/>
     <classes>
-      <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
+      <class name="BrowserStack.ElPaisTest.BrowserStackTest"/>
     </classes>
   </test>
 
@@ -27,7 +27,7 @@
     <parameter name="browserName" value="Safari"/>
     <parameter name="browserVersion" value="latest"/>
     <classes>
-      <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
+      <class name="BrowserStack.ElPaisTest.BrowserStackTest"/>
     </classes>
   </test>
 
@@ -35,7 +35,7 @@
     <parameter name="device" value="iPhone 14"/>
     <parameter name="realMobile" value="true"/>
     <classes>
-      <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
+      <class name="BrowserStack.ElPaisTest.BrowserStackTest"/>
     </classes>
   </test>
 
@@ -43,7 +43,7 @@
     <parameter name="device" value="Samsung Galaxy S23"/>
     <parameter name="realMobile" value="true"/>
     <classes>
-      <class name="BrowserStack.ElPaisTest.BrowserStackExampleTest"/>
+      <class name="BrowserStack.ElPaisTest.BrowserStackTest"/>
     </classes>
   </test>
 </suite>

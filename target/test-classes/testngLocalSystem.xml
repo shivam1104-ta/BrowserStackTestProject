@@ -4,8 +4,8 @@
   <test name="LocalChromeTest">
     <classes>
       
-       <class name="BrowserStack.ElPaisTest.ElPaisScraperTest"/>
-        <class name="BrowserStack.ElPaisTest.TranslationService"/>
+       <class name="BrowserStack.ElPaisTest.ArticleScraperTest"/>
+        <class name="BrowserStack.ElPaisTest.LanguageService"/>
     </classes>
   </test>
 </suite>

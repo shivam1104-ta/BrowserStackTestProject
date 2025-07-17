@@ -34,9 +34,9 @@ ElPaisScraperProject ├── pom.xml ├── README.md ├── src │ └
 markdown
 Copy code
 
-- **`ElPaisScraperTest.java`** – A basic TestNG class for local testing.  
-- **`BrowserStackExampleTest.java`** – Demonstrates parallel cross‐browser testing on BrowserStack.  
-- **`TranslationService.java`** – Calls the Rapid Translate API.  
+- **`ArticleScraperTest.java`** – A basic TestNG class for local testing.  
+- **`BrowserStackTest.java`** – Demonstrates parallel cross‐browser testing on BrowserStack.  
+- **`LanguageService.java`** – Calls the Rapid Translate API.  
 - **`testngBrowserStack.xml`** – Manages parallel TestNG runs (desktop + mobile browsers).
 - **`testngLocalSystem.xml`** – Manages local System TestNg runs.
 
